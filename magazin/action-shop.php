@@ -36,16 +36,16 @@ $sql = "select id,name from categories where shop_id = " . $id . "";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
-    $id = 1;
+    $id_p = 1;
     while($row = $result->fetch_assoc()){
         ?>
         <div>
             <a href="index.php?action=category&shop_id=<?= $id ?>&category_id=<?= $row["id"] ?>">
-                <?php echo $id . " " . $row["name"]; ?>
+                <?php echo $id_p . " " . $row["name"]; ?>
             </a>
         </div>
         <?php
-        $id = $id + 1;
+        $id_p = $id_p + 1;
     }
 } else {
     echo "0 results";
