@@ -71,4 +71,6 @@ if ($result->num_rows > 0) {
         <hr>
         <?php
     }
+} else {
+    echo "0 results";
 }
